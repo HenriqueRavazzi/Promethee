@@ -1,5 +1,5 @@
 from Criterias import MCDM
-import numpy as np
+import numpy
 
 alternatives = [
     'First Alternative',
