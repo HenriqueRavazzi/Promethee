@@ -6,8 +6,8 @@ class MCDM(Promethee):
         criterias = self.__set_criterias()
         super().__init__(alternatives, criterias)
 
-    def __set_criterias()-> List[Criteria]:
-        criteria = list()
+    def __set_criterias(self) -> List[Criteria]:
+        criterias = list()
 
         first_criteria = Criteria(
             name='OEE',
@@ -43,4 +43,4 @@ class MCDM(Promethee):
 
         # You could have as many criterias you want
 
-        return criteria
+        return criterias

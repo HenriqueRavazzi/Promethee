@@ -1,4 +1,4 @@
-from .Criterias import MCDM
+from Criterias import MCDM
 import numpy as np
 
 alternatives = [
@@ -10,10 +10,10 @@ alternatives = [
 
 my_decision = MCDM(alternatives)
 
-first_criteria_values = [10, 22]
-second_criteria_values = [9, 98]
-third_criteria_values = [10, 30]
-fourth_criteria_value = [5, 83]
+first_criteria_values = [10, 22, 14, 15]
+second_criteria_values = [9, 98, 14, 15]
+third_criteria_values = [10, 30, 14, 15]
+fourth_criteria_value = [5, 83, 14, 15]
 
 values = np.array([
     first_criteria_values,
@@ -23,3 +23,7 @@ values = np.array([
 ])
 
 output = my_decision.prioritize(values)
+
+
+for i, unicriteria_phi in enumerate(output.unicriteria_phi):
+    print(f'{i}- {unicriteria_phi}\n')
