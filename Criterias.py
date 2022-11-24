@@ -10,8 +10,8 @@ class MCDM(Promethee):
         criterias = list()
 
         first_criteria = Criteria(
-            name='OEE',
-            weight=0.25,
+            name='Quality',
+            weight=0.20,
             goal='max',
             curve=UsualCurve()
         )
@@ -19,27 +19,35 @@ class MCDM(Promethee):
 
         second_criteria = Criteria(
             name='Production',
-            weight=0.25,
-            goal='min',
+            weight=0.20,
+            goal='max',
             curve=UsualCurve()
         )
-        criterias.append(second_criteria)
+        criterias.append(second_criteria) 
 
         third_criteria = Criteria(
-            name='MTTR',
-            weight=0.25,
+            name='Viability',
+            weight=0.20,
             goal='min',
             curve=UsualCurve()
         )
         criterias.append(third_criteria)
 
         fourth_criteria = Criteria(
-            name='MTBF',
-            weight=0.25,
+            name='MTTR',
+            weight=0.20,
             goal='min',
             curve=UsualCurve()
         )
         criterias.append(fourth_criteria)
+
+        fifth_criteria = Criteria(
+            name='MTBF',
+            weight=0.20,
+            goal='min',
+            curve=UsualCurve()
+        )
+        criterias.append(fifth_criteria)
 
         # You could have as many criterias you want
 
