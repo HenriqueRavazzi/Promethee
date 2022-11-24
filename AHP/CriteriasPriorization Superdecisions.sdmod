@@ -1,0 +1,249 @@
+set top_net [getTopNet $net]
+set SAVED_WITH_VERSION {2.8.0 made on Thur, 28 Apr 2016 11:20:20 -0400.  VCRevInfo 2878.  Installed on Windows}
+setDefaultCompareMode $net switch_to_question
+set x 28
+set y 19
+set desc {description}
+set name {First}
+set color white
+set iconUU {}
+set iconFont "-*-times-medium-r-normal-*-12-*-*-*-*-*"
+set winFont "-*-times-medium-r-normal-*-12-*-*-*-*-*"
+set width 135
+set height 249
+set clusterName {First}
+set clusterCompareWord {}
+makeCluster $net $x $y $name $desc
+clusterChangeColor $net $name $color
+setClusterIconUU $net $name $iconUU
+setClusterIconFont $net $name $iconFont
+setClusterTitleFont $net $name $winFont
+setClusterWinSize $net $name $width $height
+setClusterCompareWord $net $name $clusterCompareWord
+deIconizeCluster $net $name
+set name {AHP IS}
+set desc {description}
+set x 1
+set y -1
+set color {white}
+set iconUU {}
+set font {-*-times-medium-r-normal-*-12-*-*-*-*-*}
+makeNode $net $clusterName $name $desc $x $y
+setNodeIconUU $net $name $iconUU
+setNodeColor $net $name $color
+setNodeFont $net $name $font
+set x 243
+set y 23
+set desc {description}
+set name {Second}
+set color white
+set iconUU {}
+set iconFont "-*-times-medium-r-normal-*-12-*-*-*-*-*"
+set winFont "-*-times-medium-r-normal-*-12-*-*-*-*-*"
+set width 187
+set height 261
+set clusterName {Second}
+set clusterCompareWord {}
+makeCluster $net $x $y $name $desc
+clusterChangeColor $net $name $color
+setClusterIconUU $net $name $iconUU
+setClusterIconFont $net $name $iconFont
+setClusterTitleFont $net $name $winFont
+setClusterWinSize $net $name $width $height
+setClusterCompareWord $net $name $clusterCompareWord
+deIconizeCluster $net $name
+set name {Aviability}
+set desc {description}
+set x 49
+set y 48
+set color {white}
+set iconUU {}
+set font {-*-times-medium-r-normal-*-12-*-*-*-*-*}
+makeNode $net $clusterName $name $desc $x $y
+setNodeIconUU $net $name $iconUU
+setNodeColor $net $name $color
+setNodeFont $net $name $font
+set name {MTBF}
+set desc {description}
+set x 0
+set y 175
+set color {white}
+set iconUU {}
+set font {-*-times-medium-r-normal-*-12-*-*-*-*-*}
+makeNode $net $clusterName $name $desc $x $y
+setNodeIconUU $net $name $iconUU
+setNodeColor $net $name $color
+setNodeFont $net $name $font
+set name {MTTR}
+set desc {description}
+set x 88
+set y 174
+set color {white}
+set iconUU {}
+set font {-*-times-medium-r-normal-*-12-*-*-*-*-*}
+makeNode $net $clusterName $name $desc $x $y
+setNodeIconUU $net $name $iconUU
+setNodeColor $net $name $color
+setNodeFont $net $name $font
+set name {Production}
+set desc {description}
+set x 77
+set y 98
+set color {white}
+set iconUU {}
+set font {-*-times-medium-r-normal-*-12-*-*-*-*-*}
+makeNode $net $clusterName $name $desc $x $y
+setNodeIconUU $net $name $iconUU
+setNodeColor $net $name $color
+setNodeFont $net $name $font
+set name {Quality}
+set desc {description}
+set x -2
+set y 97
+set color {white}
+set iconUU {}
+set font {-*-times-medium-r-normal-*-12-*-*-*-*-*}
+makeNode $net $clusterName $name $desc $x $y
+setNodeIconUU $net $name $iconUU
+setNodeColor $net $name $color
+setNodeFont $net $name $font
+set x 489
+set y 23
+set desc {description}
+set name {Third}
+set color white
+set iconUU {}
+set iconFont "-*-times-medium-r-normal-*-12-*-*-*-*-*"
+set winFont "-*-times-medium-r-normal-*-12-*-*-*-*-*"
+set width 146
+set height 267
+set clusterName {Third}
+set clusterCompareWord {}
+makeCluster $net $x $y $name $desc
+clusterChangeColor $net $name $color
+setClusterIconUU $net $name $iconUU
+setClusterIconFont $net $name $iconFont
+setClusterTitleFont $net $name $winFont
+setClusterWinSize $net $name $width $height
+setClusterCompareWord $net $name $clusterCompareWord
+deIconizeCluster $net $name
+set name {OP1}
+set desc {description}
+set x 72
+set y 13
+set color {white}
+set iconUU {}
+set font {-*-times-medium-r-normal-*-12-*-*-*-*-*}
+makeNode $net $clusterName $name $desc $x $y
+setNodeIconUU $net $name $iconUU
+setNodeColor $net $name $color
+setNodeFont $net $name $font
+set name {OP2}
+set desc {description}
+set x 8
+set y 49
+set color {white}
+set iconUU {}
+set font {-*-times-medium-r-normal-*-12-*-*-*-*-*}
+makeNode $net $clusterName $name $desc $x $y
+setNodeIconUU $net $name $iconUU
+setNodeColor $net $name $color
+setNodeFont $net $name $font
+set name {OP3}
+set desc {description}
+set x 58
+set y 107
+set color {white}
+set iconUU {}
+set font {-*-times-medium-r-normal-*-12-*-*-*-*-*}
+makeNode $net $clusterName $name $desc $x $y
+setNodeIconUU $net $name $iconUU
+setNodeColor $net $name $color
+setNodeFont $net $name $font
+set init {First}
+set final {Second}
+connectClusters $net $init $final
+set init {Second}
+set final {Third}
+connectClusters $net $init $final
+setNodeCompareWord  $net {AHP IS} {Second} {important}
+setNodeCompareWord  $net {Aviability} {Third} {important}
+setNodeCompareWord  $net {MTBF} {Third} {important}
+setNodeCompareWord  $net {MTTR} {Third} {important}
+setNodeCompareWord  $net {Production} {Third} {important}
+setNodeCompareWord  $net {Quality} {Third} {important}
+setNetCompareWord $net {important}
+setNetClusterColor $net {white}
+setNetNodeColor $net {white}
+setNetClusterWinFont $net {-*-times-medium-r-normal-*-12-*-*-*-*-*}
+setNetClusterIconFont $net {-*-times-medium-r-normal-*-12-*-*-*-*-*}
+setNetNodeFont $net {-*-times-medium-r-normal-*-12-*-*-*-*-*}
+setFormulaType $net 0
+#Working on net 0
+catch {limitPowerOptions $net 2 0}
+c-network readAllCompares -network $net -source {
+3
+Third
+3
+OP3
+OP2
+OP1
+Second
+5
+Aviability
+Production
+Quality
+MTTR
+MTBF
+First
+1
+AHP IS
+
+3 0,0 1,1 2,2 
+ 0.000000  1.000000  0.000000 
+ 0.000000  0.000000  1.000000 
+ 0.000000  0.000000  0.000000 
+0
+0 
+
+1
+1 0,0 
+
+2
+1 1,0 
+
+1,0,0
+3 1,0 0,1 2,2 
+ 1.000000  1.000000 
+ 1.000000 
+
+1,1,0
+3 1,0 0,1 2,2 
+ 1.000000  1.000000 
+ 1.000000 
+
+1,2,0
+3 1,0 0,1 2,2 
+ 1.000000  1.000000 
+ 1.000000 
+
+1,3,0
+3 1,0 0,1 2,2 
+ 1.000000  1.000000 
+ 1.000000 
+
+1,4,0
+3 1,0 0,1 2,2 
+ 1.000000  1.000000 
+ 1.000000 
+
+2,0,1
+5 0,0 4,1 3,2 1,3 2,4 
+ 1.000000  0.142857  1.000000  0.333333 
+ 5.000000  5.000000  0.200000 
+ 5.000000  5.000000 
+ 0.200000 
+
+}
+set FORMAT 1
+recreateNetInsideFrameOnly $net
