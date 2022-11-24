@@ -1,7 +1,7 @@
 from typing import List
 from promethee import Promethee, Criteria, UsualCurve
 
-class MCDM(Promethee):
+class CriteriasPriorization(Promethee):
     def __init__(self, alternatives: List[str]):
         criterias = self.__set_criterias()
         super().__init__(alternatives, criterias)

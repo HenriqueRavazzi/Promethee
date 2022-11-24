@@ -1,5 +1,5 @@
-from Criterias import MCDM
-import numpy
+from Criterias import CriteriasPriorization
+import numpy as np
 
 alternatives = [
     'First Alternative',
@@ -8,7 +8,7 @@ alternatives = [
     'Fourth Alternative'
 ]
 
-my_decision = MCDM(alternatives)
+my_decision = CriteriasPriorization(alternatives)
 
 first_criteria_values = [10, 22, 14, 15]
 second_criteria_values = [9, 98, 14, 15]
