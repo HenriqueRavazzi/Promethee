@@ -11,11 +11,11 @@ alternatives = [
 
 my_decision = CriteriasPriorization(alternatives)
 
-first_criteria_values = [10, 22, 14, 15]
-second_criteria_values = [9, 98, 14, 15]
-third_criteria_values = [10, 30, 14, 15]
-fourth_criteria_value = [5, 83, 14, 15]
-fifth_criteria_value = [15, 20, 25, 30]
+first_criteria_values = [10, 22, 14, 15, 12]
+second_criteria_values = [9, 98, 14, 15, 30]
+third_criteria_values = [10, 30, 14, 15, 20]
+fourth_criteria_value = [5, 83, 14, 15, 90]
+fifth_criteria_value = [15, 20, 25, 30, 35]
 
 values = np.array([
     first_criteria_values,
