@@ -9,45 +9,45 @@ class CriteriasPriorization(Promethee):
     def __set_criterias(self) -> List[Criteria]:
         criterias = list()
 
-        first_criteria = Criteria(
+        Quality = Criteria(
             name='Quality',
-            weight=0.20,
+            weight=0.28387,
             goal='min',
             curve=UsualCurve()
         )
-        criterias.append(first_criteria) 
+        criterias.append(Quality) 
 
-        second_criteria = Criteria(
+        Production = Criteria(
             name='Production',
-            weight=0.20,
+            weight=0.03716,
             goal='min',
             curve=UsualCurve()
         )
-        criterias.append(second_criteria) 
+        criterias.append(Production) 
 
-        third_criteria = Criteria(
+        Avaibility = Criteria(
             name='Availability',
-            weight=0.20,
+            weight=0.06964,
             goal='min',
             curve=UsualCurve()
         )
-        criterias.append(third_criteria)
+        criterias.append(Avaibility)
 
-        fourth_criteria = Criteria(
+        MTTR = Criteria(
             name='MTTR',
-            weight=0.20,
+            weight=0.32180,
             goal='max',
             curve=UsualCurve()
         )
-        criterias.append(fourth_criteria)
+        criterias.append(MTTR)
 
-        fifth_criteria = Criteria(
+        MTBF = Criteria(
             name='MTBF',
-            weight=0.20,
+            weight=0.28753,
             goal='min',
             curve=UsualCurve()
         )
-        criterias.append(fifth_criteria)
+        criterias.append(MTBF)
 
         # You could have as many criterias you want
 
