@@ -4,16 +4,15 @@ import numpy as np
 alternatives = [
     'OP 1',
     'OP 2',
-    'OP 3'
 ]
 
 my_decision = CriteriasPriorization(alternatives)
 
-Quality = [10, 22, 34]
-Production = [9, 98, 186]
-Avaibility = [10, 30, 50]
-MTTR = [5, 83, 161]
-MTBF = [15, 20, 25]
+Quality = [10, 22]
+Production = [9, 98]
+Avaibility = [10, 30]
+MTTR = [5, 83]
+MTBF = [15, 20]
 
 values = np.array([
     Quality,
